@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Guide-Us</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h2>Login to Guide-Us</h2>
+            <form onsubmit="return validateLogin()">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <a href="homepg.html" class="cta-btn">Login</a>
+                <p>New here? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+            </form>
+        </div>
+
+        <!-- Sign-Up Form (Initially Hidden) -->
+        <div class="form-container hidden" id="signup-form">
+            <h2>Create an Account</h2>
+            <form onsubmit="return validateSignUp()">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <input type="password" id="signup-confirm" placeholder="Confirm Password" required>
+                <a href="homepg.html" class="butn">sign up</a>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
